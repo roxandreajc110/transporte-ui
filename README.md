@@ -17,3 +17,9 @@ Desde la raiz del proyecto realizar:
 2. Subir proyecto: 
    ***ng serve*** 
    Por lo general queda ejecutandose en:  http://localhost:4200/
+
+## Vistas
+
+![Vista 1](https://github.com/roxandreajc110/file/blob/main/vista1.PNG?raw=true)
+
+![Vista 2](https://github.com/roxandreajc110/file/blob/main/vista2.PNG?raw=true)
