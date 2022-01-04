@@ -1,0 +1,43 @@
+<h1>Creación Empresa Transportadora</h1>
+<form #formTemplate="ngForm" autocomplete="off">
+    <div class="form-group py-sm-2 mb-0">
+        <label for="tipoIdentificacion">Tipo de identificación</label>
+        <select class="form-control" id="tipoIdentificacion" name="tipoIdentificacion" required
+            [(ngModel)]="empresaTransportadoraForm.tipoIdentificacion">
+            <option>NIT</option>
+        </select>
+    </div>
+    <div class="form-group py-sm-2 mb-0">
+        <label for="inputIdentificacion">Identificación</label>
+        <input type="text" class="form-control" id="identificacion" name="identificacion"
+            [(ngModel)]="empresaTransportadoraForm.identificacion"
+            placeholder="Ingrese la identificación de la empresa" required>
+    </div>
+    <div class="form-group py-sm-2 mb-0">
+        <label for="inputNombre">Nombre</label>
+        <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="empresaTransportadoraForm.nombre"
+            placeholder="Ingrese el nombre de la empresa" required>
+    </div>
+    <div class="form-group py-sm-2 mb-0">
+        <label for="inputDireccion">Dirección</label>
+        <input type="text" class="form-control" id="direccion" name="direccion"
+            [(ngModel)]="empresaTransportadoraForm.direccion" placeholder="Ingrese la dirección de la empresa" required>
+    </div>
+    <div class="form-group py-sm-2 mb-0">
+        <label for="inputTel">Telefono</label>
+        <input type="text" class="form-control" id="telefono" name="telefono"
+            [(ngModel)]="empresaTransportadoraForm.telefono" placeholder="Ingrese el telefono de la empresa" required>
+    </div>
+    <div class="form-group py-sm-2 mb-0">
+        <label for="tipoId">Representante Legal</label>
+        <select class="form-control" id="representante" name="representante" required
+            [(ngModel)]="idRepresentanteLegalSeleccionado">
+            <option *ngFor="let representanteLegal of representantesLegal" [value]="representanteLegal.id">
+                {{representanteLegal.nombre}} -
+                {{representanteLegal.tipoIdentificacion}}.{{representanteLegal.identificacion}}
+            </option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-secondary py-sm-2 mb-0" routerLink="/empresas-transportadoras">Regresar</button>
+    <button type="submit" class="btn btn-primary py-sm-2 mb-0" [disabled]="formTemplate.form.invalid" (click)="crearEmpresa()">Crear</button>
+</form>

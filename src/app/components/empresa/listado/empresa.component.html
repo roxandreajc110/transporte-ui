@@ -1,0 +1,28 @@
+<h1>Empresas Transportadoras</h1>
+<div class="container">
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Tipo identificación</th>
+        <th scope="col">Identificación</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Dirección</th>
+        <th scope="col">Telefono</th>
+        <th scope="col">Representante Legal
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let empresa of empresasTransportadoras">
+        <td>{{empresa.tipoIdentificacion}}</td>
+        <td>{{empresa.identificacion}}</td>
+        <td>{{empresa.nombre}}</td>
+        <td>{{empresa.direccion}}</td>
+        <td>{{empresa.telefono}}</td>
+        <td>{{empresa.representanteLegal.nombre}} -
+          {{empresa.representanteLegal.tipoIdentificacion}}.{{empresa.representanteLegal.identificacion}}</td>
+      </tr>
+    </tbody>
+    <button type="button" class="btn btn-primary" routerLink="/crear-empresa">Crear Empresa</button>
+  </table>
+</div>
