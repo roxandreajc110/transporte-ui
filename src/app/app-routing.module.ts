@@ -7,6 +7,7 @@ const routes: Routes = [
   { path: '', component: EmpresaComponent },
   { path: 'empresas-transportadoras', component: EmpresaComponent },
   { path: 'crear-empresa', component: CrearEmpresaComponent },
+  { path: '**', component: EmpresaComponent }
 
 ];
 
